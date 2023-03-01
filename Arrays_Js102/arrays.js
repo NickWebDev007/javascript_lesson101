@@ -321,4 +321,76 @@ getcars2 = allcars[0][0];
 console.log(getcars);
 console.log(getcars2);
 
+console.log(cars);
+
 console.log("-----end of Arrays-");
+
+console.log("-------Practice exercise 3.2---------");
+
+//Create an empty array to use as a shopping list.
+// 2. Add Milk, Bread, and Apples to your list. 3. Update "Bread" with Bananas and Eggs. 4. Remove the last item from the array and output it into the console. 5. Sort the list alphabetically. 6. Find and output the index value of Milk. 7. After Bananas, add Carrots and Lettuce. 8. Create a new list containing Juice and Pop. 9. Combine both lists, adding the new list twice to the end of the first list. 10. Get the last index value of Pop and output it to the console. 11. Your final list should look like this:
+
+const shoppingCart = ["Milk", "Bread", "Apples"];
+
+console.log(shoppingCart);
+//"Milk", "bread", "Apples"
+
+shoppingCart.splice(1, 1, "Bananas", "Eggs");
+console.log(shoppingCart);
+//output 'Milk', 'Bananas', 'eggs', 'Apples'
+
+const removeLast = shoppingCart.pop();
+console.log(removeLast);
+//output  ['Milk', 'Bananas', 'eggs'
+
+shoppingCart.sort();
+console.log(shoppingCart);
+// output ['Bananas', 'Eggs', 'Milk']
+
+console.log(shoppingCart.indexOf("Milk"));
+//output 2
+
+shoppingCart.splice(1, 0, "Carrrots", "Lettuce");
+console.log(shoppingCart);
+//output 'Bananas', 'Carrrots', 'Lettuce', 'Eggs', 'Milk']
+
+const shopItems = ["juice", "pop"];
+
+const additem = shoppingCart.concat(shopItems, shopItems);
+console.log(additem);
+
+//output 'Bananas', 'Carrrots', 'Lettuce', 'Eggs', 'Milk', 'juice', 'pop', 'juice', 'pop'
+
+console.log("-------End of Practice exercise 3.2---------");
+
+//Revison
+//If you want to access elements of the inner arrays, you will have to specify an index twice:
+
+let someValue1 = [1, 2, 3, 4];
+let someValue2 = [4, 5, 6, 5];
+let someValue3 = [7, 8, 9.1];
+
+let someValue = [someValue1, someValue2, someValue3];
+console.log(someValue);
+
+let resultValues = someValue[0][1];
+let resultValue2 = someValue[2][1];
+console.log(resultValue2);
+
+let midValue = someValue[1][1][1];
+console.log(midValue);
+
+const newArrNum = [1, 2, 3];
+const myNewArrNum = [newArrNum, newArrNum, newArrNum];
+console.log(myNewArrNum);
+
+const animal = ["dog", "cat", "snake"];
+const animalcon = [animal, animal, animal];
+animal[0] = "Gorilla";
+const addAnim = animal.splice(0, 0, "Deer", "Antelope");
+console.log(animal);
+console.log(animalcon);
+
+let arr = [0, 1, 2, 3];
+
+console.log(typeof arr);
